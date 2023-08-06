@@ -1,29 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="icon" href="img/logo.png" type="image/svg+xml">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <!-- https://fonts.google.com/ -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/templatemo-video-catalog.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6a9ac4;
+}
+
+#contact {
+  background-color: #6a9ac4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  width: clamp(100px, 90%, 1000px);
+  margin: 80px 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-links, .contact-form-wrapper {
+  width: 50%;
+  padding: 8% 5% 10% 5%;
+}
+
+
+.contact-links {
+  background-color: #1f2e43;
+  background:
+    radial-gradient(
+      circle at 55% 92%, #426691 0 12%, transparent 12.2%
+    ), 
+    radial-gradient(
+      circle at 94% 72%, #426691 0 10%, transparent 10.2%
+    ), 
+    radial-gradient(
+      circle at 20% max(78%, 350px), #263a53 0 7%, transparent 7.2%
+    ), 
+    radial-gradient(
+      circle at 0% 0%, #263a53 0 40%, transparent 40.2%
+    ), 
+    #1f2e43;
+  border-radius: 10px 0 0 10px;
+}
+
+.contact-form-wrapper {
+  background-color: #ffffff8f;
+  border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-links, .contact-form-wrapper {
+    width: 100%;
+  }
+  
+  .contact-links {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .contact-form-wrapper {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact-box {
+    width: 95%;
+    margin: 8% 5%;
+  }
+}
+
+h2 {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+  font-size: clamp(30px, 6vw, 60px);
+  letter-spacing: 2px;
+  text-align: center;
+  transform: scale(.95, 1);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.link {
+  margin: 10px;
+  cursor: pointer;
+}
+
+img {
+  width: 45px;
+  height: 45px;
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #0006);
+  transition: 0.2s;
+  user-select: none;
+}
+
+img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+img:active {
+  transform: scale(1.1, 1.1);
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #222)
+    sepia(0.3);
+}
+
+.form-item {
+  position: relative;
+}
+
+label, input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  color: #999;
+  font-size: clamp(14px, 1.5vw, 18px);
+  pointer-events: none;
+  user-select: none;
+}
+
+input, textarea {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: clamp(15px, 1.5vw, 18px);
+}
+
+input:focus+label, 
+input:valid+label, 
+textarea:focus+label, 
+textarea:valid+label {
+  font-size: clamp(13px, 1.3vw, 16px);
+  color: #777;
+  top: -20px;
+  transition: all .225s ease;
+}
+
+.submit-btn {
+  background-color: #6a9ac4;
+  filter: drop-shadow(2px 2px 3px #0003);
+  color: #fff;
+  font-family: "Poppins",sans-serif;
+  font-size: clamp(16px, 1.6vw, 18px);
+  display: block;
+  padding: 12px 20px;
+  margin: 2px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.submit-btn:active {
+  transform: scale(1.1, 1.1);
+  filter: sepia(0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: clamp(40px, 10vw, 60px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: clamp(30px, 12vw, 60px);
+  }
+  
+  .links {
+    padding-top: 30px;
+  }
+  
+  img {
+    width: 38px;
+    height: 38px;
+  }
+}
+    </style>
 </head>
-<!--
-
-
--->
 <body>
-	<div class="tm-page-wrap mx-auto">
-		<div class="position-relative">
-			<div class="potition-absolute tm-site-header">
-				<div class="container-fluid position-relative">
-					<div class="row">						
-                        <div class="col-7 col-md-4">
-
-                        </div>
+    <div class="tm-page-wrap mx-auto">
+        <div class="position-relative">
+            <div class="potition-absolute tm-site-header">
+                <div class="container-fluid position-relative">
+                    <div class="row">						
+                        <div class="col-7 col-md-4"></div>
                         <div class="col-5 col-md-8 ml-auto mr-0">
                             <div class="tm-site-nav">
                                 <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
@@ -38,8 +237,8 @@
                                     <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
                                         <ul class="navbar-nav text-uppercase">
                                             <li class="nav-item">
-												<a class="nav-link tm-nav-link" href="intern.html">Internship</a>
-											</li>
+                                                <a class="nav-link tm-nav-link" href="intern.html">Internship</a>
+                                            </li>
                                             <li class="nav-item">
                                                 <a class="nav-link tm-nav-link" href="index.html">Certification</a>
                                             </li>
@@ -54,82 +253,93 @@
                                 </nav>
                             </div>
                         </div>
-					</div>
-				</div>
-			</div>
-			<div class="tm-welcome-container tm-fixed-header tm-fixed-header-3">
-				<div class="text-center">
-					<p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 mt-lg-0 mt-5 text-white mx-auto">
-                        </p>                	
-				</div>                
+                    </div>
+                </div>
+            </div>
+            <div class="tm-welcome-container tm-fixed-header tm-fixed-header-3">
+                <div class="text-center">
+                    <p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 mt-lg-0 mt-5 text-white mx-auto">
+                    </p>                	
+                </div>                
             </div>
 
-            <div id="tm-fixed-header-bg"></div> <!-- Header image -->
-		</div>
-
-		<!-- Page content -->
-		<main>
-			<div class="container-fluid px-0">
-
-				<div class="mx-auto tm-content-container mt-4 px-3 mb-3">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="tm-page-title mb-5 tm-text-primary">Developers</h2>    
-                        </div>                        
+            <div id="tm-fixed-header-bg"></div>
+        </div>
+        <section id="contact">
+            <div class="contact-box">
+                <div class="contact-links">
+                    <h2>CONTACT</h2>
+                    <div class="links">
+                        <div class="link">
+                            <a href="https://www.linkedin.com/company/code-academy-internship/" target="_blank">
+                                <img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin">
+                            </a>
+                        </div>
+                        <div class="link">
+                            <a href="mailto:code.acadamy.io@gmail.com" target="_blank">
+                                <img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email"></a>
+                        </div>
                     </div>
-					<div class="row">
-		                <div class="col-lg-6 mb-5 pt-3">
-                            <div class="media tm-testimonial">
-                                <a href="https://www.linkedin.com/in/samirsengupta/" target="_blank">
-                                    <img class="mr-4 rounded-circle img-fluid" src="img/testimonial-1.jpg" alt="Generic placeholder image" title="LinkedIn">
-                                </a>
-                                <p class="media-body pt-3 tm-testimonial-text">
-                                    Samir Sengupta<br>A visionary data scientist, conceived the groundbreaking idea of "Code Academy" and spearheaded its front-end development, showcasing his expertise in data-related endeavors.
-                                </p>
-                            </div>
-                        
-                        </div>
-		                <div class="col-lg-6 mb-5 pt-3">
-                            <div class="media tm-testimonial">
-                                <a href="https://www.linkedin.com/in/yawar-ali-shaikh-859125273/" target="_blank">
-                                    <img class="mr-4 rounded-circle img-fluid" src="img/testimonial-2.jpg" alt="Generic placeholder image" title="LinkedIn">
-                                </a>
-                                <p class="media-body pt-3 tm-testimonial-text">
-                                    Yavar Ali Shaikh<br>A talented data scientist, contributed his expertise to the development of "Code Academy", showcasing his adeptness in data-related domains.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-5 pt-3">
-                            <div class="media tm-testimonial">
-                                <a href="https://www.linkedin.com/in/rishikesh-vishwakarma-b4b571210" target="_blank">
-                                    <img class="mr-4 rounded-circle img-fluid" src="img/testimonial-3.jpg" alt="Generic placeholder image" title="LinkedIn">
-                                </a>
-                                <p class="media-body pt-3 tm-testimonial-text">
-                                    Rishikesh Vishwakarma<br>A talented Front End Designer, contributed his expertise to the development of front end based courses for "Code Academy".
-                                </p>
-                            </div>
-                        
-                        </div>
-                                                       
-                        
-		            </div>
-				</div>
-			</div>
-		</main>
-
-
-            <footer class="row pt-5">
-                <div class="col-12">
-                    <p class="text-right">Copyright May 2023
-                        
-                        - Designed by <a href="https://samirsengupta.github.io/SamirSengupta/" rel="nofollow" target="_parent">Code Academy</a></p>
                 </div>
-            </footer>
-		</div>		
-	</div>
+                <div class="contact-form-wrapper">
+                    <form id="contactForm">
+                        <div class="form-item">
+                            <input type="text" name="sender" required>
+                            <label>Name:</label>
+                        </div>
+                        <div class="form-item">
+                            <input type="text" name="email" required>
+                            <label>Email:</label>
+                        </div>
+                        <div class="form-item">
+                            <textarea class="" name="message" required></textarea>
+                            <label>Message:</label>
+                        </div>
+                        <button class="submit-btn">Send</button>  
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
 
-	<script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/parallax.min.js"></script>    
+    <script src="js/parallax.min.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDZdFHxg7di_leImooLhVlbVW7UqvgiMCs",
+            authDomain: "code-academy-20.firebaseapp.com",
+            projectId: "code-academy-20",
+            databaseURL: "https://code-academy-20-default-rtdb.firebaseio.com/",
+            storageBucket: "code-academy-20.appspot.com",
+            messagingSenderId: "986808335819",
+            appId: "1:986808335819:web:fbbd51b1e250f77da14a4e",
+            measurementId: "G-K5BTE84KZN"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const sender = contactForm.sender.value;
+            const email = contactForm.email.value;
+            const message = contactForm.message.value;
+
+            const formData = {
+                sender: sender,
+                email: email,
+                message: message
+            };
+
+            const database = firebase.database();
+            database.ref('formResponses').push(formData);
+
+            contactForm.reset();
+        });
+    </script>
 </body>
 </html>
